@@ -44,7 +44,7 @@ export const SignUp = () => {
                   id="admin/user/jobseeker"
                   value={state.userType}
                   label="Select User"
-                  onChange={(value) => handleChange("userType", value)}
+                  onChange={(e) => handleChange("userType", e.target.value)}
                 >
                   <MenuItem value={"admin"}>Admin</MenuItem>
                   <MenuItem value={"user"}>User</MenuItem>
@@ -93,7 +93,11 @@ export const SignUp = () => {
                 mt={2}
               >
                 <Box>
-                  <Button id="submitButton" variant="contained">
+                  <Button
+                    id="submitButton"
+                    variant="contained"
+                    onClick={handleSubmit}
+                  >
                     Submit
                   </Button>
                 </Box>
